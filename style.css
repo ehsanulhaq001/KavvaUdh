@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.5), rgba(255, 0, 0, 0.5)), url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#holder {
+    text-transform: uppercase;
+    color: yellow;
+    font-size: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    display: inline;
+}
