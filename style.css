@@ -17,3 +17,16 @@ body {
 p {
     display: inline;
 }
+
+#speed {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#speed:hover {
+    color: black;
+}

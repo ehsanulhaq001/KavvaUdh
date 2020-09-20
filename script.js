@@ -1,4 +1,5 @@
-let rand, audio;
+let rand, audio, speed, spd;
+spd = 1;
 let animals = [{
         name: "Kavva",
         audio: "Kavva.mp3"
@@ -56,14 +57,19 @@ let animals = [{
         audio: "Ghoada.mp3"
     }
 ]
-
-start();
-
-function start() {
-    setInterval(draw, 1000 / 1);
-}
+let startId = setInterval(draw, 1000 / spd);
 
 function draw() {
+
+    if (document.querySelector("#speedInput").value != speed) {
+        speed = document.querySelector("#speedInput").value;
+        document.querySelector("#speedOutput").innerHTML = speed;
+        spd = (speed - 2) / 4 + 1;
+        clearInterval(startId);
+        startId = setInterval(draw, 1000 / spd)
+    }
+
+
     rand = Math.floor(Math.random() * 14);
     display = animals[rand].name;
     if (rand < 7) {
